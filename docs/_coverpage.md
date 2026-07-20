@@ -2,6 +2,6 @@
 
 # ESL Onboarding Guide
 
-(for mobile only)
-
-[Let's go!](README.md)
+[English](en/)
+[Español](es/)
+[العربية](ar/)

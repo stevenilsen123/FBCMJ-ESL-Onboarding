@@ -46,7 +46,69 @@ a.content-button:hover {
     text-decoration: none;
 }
 
-/* Cover ↔ guide transition (fade + slight vertical move) */
+/* Language picker: stack cover buttons front and center */
+.cover .cover-main > p:last-child {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+}
+
+.cover .cover-main > p:last-child a {
+    display: block;
+    min-width: 12rem;
+    width: min(100%, 18rem);
+    margin: 0;
+    font-weight: 600;
+}
+
+.cover .cover-main > p:last-child a:not(:first-child) {
+    border: var(--cover-button-primary-border);
+    background-color: var(--color-fbcmj-orange);
+    color: var(--color-on-fbcmj-orange);
+}
+
+.cover .cover-main > p:last-child a:not(:first-child):hover {
+    background-color: var(--cover-button-primary-background--hover);
+    color: var(--color-on-fbcmj-blue);
+}
+
+.cover-change-language,
+.markdown-section .change-language {
+    display: inline-block;
+    margin-top: 1rem;
+    font-size: 0.95em;
+    color: var(--color-fbcmj-blue);
+}
+
+/* Arabic RTL */
+html[lang="ar"] {
+    --base-font-family: var(--base-font-family-ar);
+}
+
+html[dir="rtl"] .markdown-section {
+    text-align: start;
+}
+
+html[dir="rtl"] img:not([src*="FbcmjLogo.svg"]):not([src*="FbcmjIcon.svg"]) {
+    margin-inline-start: 0;
+    margin-inline-end: auto;
+}
+
+html[dir="rtl"] img[src*="FbcmjLogo.svg"],
+html[dir="rtl"] img[src*="FbcmjIcon.svg"] {
+    margin-inline: auto;
+}
+
+html[dir="rtl"] .markdown-section h1,
+html[dir="rtl"] .markdown-section h2,
+html[dir="rtl"] .markdown-section h3,
+html[dir="rtl"] .markdown-section h4 {
+    text-align: start;
+}
+
+/* Cover ↔ guide / cover ↔ cover transition (fade + slight vertical move) */
 section.cover {
     display: flex !important;
     position: fixed;
@@ -144,8 +206,8 @@ img {
     display: block;
     max-height: 36em;
     width: auto;
-    margin-left: 0;
-    margin-right: auto;
+    margin-inline-start: 0;
+    margin-inline-end: auto;
     border: 0.25em;
     border-style: solid;
     border-radius: 0.75em;
@@ -155,8 +217,7 @@ img[src*="FbcmjLogo.svg"],
 img[src*="FbcmjIcon.svg"] {
     border: none;
     border-radius: 0;
-    margin-left: auto;
-    margin-right: auto;
+    margin-inline: auto;
 }
 
 /* Kept for easy restore of the cover passphrase form */

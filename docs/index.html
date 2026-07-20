@@ -13,6 +13,11 @@
     <!-- Theme: Simple -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css">
 
+    <!-- Arabic-capable font (loads for all locales; used when lang=ar) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@100..900&display=swap" rel="stylesheet">
+
     <!-- Custom theme styles -->
     <link rel="stylesheet" href="css/theme-root.css">
     <link rel="stylesheet" href="css/theme-components.css">
@@ -27,7 +32,26 @@
         (function () {
             var GATE_ENABLED = false;
             var STORAGE_KEY = 'fbcmj_esl_unlocked';
-            var TARGET_HASH = '#/README';
+            var COVER_PATHS = { '/': true, '/en/': true, '/es/': true, '/ar/': true };
+
+            function getLocaleFromHash(hash) {
+                var cleaned = (hash || '').replace(/^#/, '').split('?')[0];
+                if (cleaned.indexOf('/es') === 0) {
+                    return 'es';
+                }
+                if (cleaned.indexOf('/ar') === 0) {
+                    return 'ar';
+                }
+                if (cleaned.indexOf('/en') === 0) {
+                    return 'en';
+                }
+                return '';
+            }
+
+            function getTargetHash() {
+                var locale = getLocaleFromHash(window.location.hash) || 'en';
+                return '#/' + locale + '/README';
+            }
 
             function isUnlocked() {
                 try {
@@ -56,7 +80,10 @@
                 }
 
                 var path = cleaned.split('?')[0];
-                return path === '' || path === '/';
+                if (path.charAt(path.length - 1) !== '/') {
+                    path = path + '/';
+                }
+                return Boolean(COVER_PATHS[path] || COVER_PATHS['/' + path.replace(/^\//, '')]);
             }
 
             function redirectToCoverIfLocked() {
@@ -79,9 +106,17 @@
                     return;
                 }
 
-                if (!window.location.hash || window.location.hash === '#/' || window.location.hash === '#') {
-                    window.location.hash = TARGET_HASH;
+                if (isCoverHash(window.location.hash) || !window.location.hash || window.location.hash === '#') {
+                    window.location.hash = getTargetHash();
                 }
+            }
+
+            function applyDocumentLocale() {
+                var locale = getLocaleFromHash(window.location.hash);
+                var lang = locale || 'en';
+                var dir = locale === 'ar' ? 'rtl' : 'ltr';
+                document.documentElement.lang = lang;
+                document.documentElement.dir = dir;
             }
 
             window.FBCMJ_GATE = {
@@ -90,22 +125,85 @@
                 setUnlocked: setUnlocked,
                 redirectToCoverIfLocked: redirectToCoverIfLocked,
                 redirectToTargetIfUnlocked: redirectToTargetIfUnlocked,
+                applyDocumentLocale: applyDocumentLocale,
+                getLocaleFromHash: getLocaleFromHash,
+                isCoverHash: isCoverHash,
             };
 
             // Alias kept for restore-ready cover form handler
             window.SIMPL_GATE = window.FBCMJ_GATE;
 
-            window.addEventListener('hashchange', redirectToCoverIfLocked);
+            window.addEventListener('hashchange', function () {
+                redirectToCoverIfLocked();
+                applyDocumentLocale();
+            });
             redirectToCoverIfLocked();
+            applyDocumentLocale();
         })();
     </script>
 
     <script>
         window.$docsify = {
             name: 'FBCMJ ESL Onboarding Guide',
+            nameLink: '#/',
             repo: '',
-            coverpage: true,
+            coverpage: ['/', '/en/', '/es/', '/ar/'],
             onlyCover: true,
+            fallbackLanguages: ['en'],
+            plugins: [
+                function (hook) {
+                    // Docsify keeps .cover.show when switching covers, so replay the
+                    // same show-class transition used for cover ↔ guide.
+                    var pendingCoverTransition = false;
+
+                    function hashFromUrl(url) {
+                        var index = String(url || '').indexOf('#');
+                        return index >= 0 ? url.slice(index) : '#/';
+                    }
+
+                    window.addEventListener('hashchange', function (event) {
+                        var gate = window.FBCMJ_GATE;
+                        if (!gate || !gate.isCoverHash) {
+                            return;
+                        }
+
+                        var fromHash = hashFromUrl(event.oldURL);
+                        var toHash = window.location.hash || '#/';
+                        if (!gate.isCoverHash(fromHash) || !gate.isCoverHash(toHash)) {
+                            return;
+                        }
+
+                        pendingCoverTransition = true;
+                        var cover = document.querySelector('section.cover');
+                        if (cover) {
+                            cover.classList.remove('show');
+                        }
+                    });
+
+                    hook.doneEach(function () {
+                        if (window.FBCMJ_GATE && window.FBCMJ_GATE.applyDocumentLocale) {
+                            window.FBCMJ_GATE.applyDocumentLocale();
+                        }
+
+                        if (!pendingCoverTransition) {
+                            return;
+                        }
+
+                        pendingCoverTransition = false;
+                        var cover = document.querySelector('section.cover');
+                        if (!cover) {
+                            return;
+                        }
+
+                        // Docsify re-adds .show while rendering; replay the CSS transition.
+                        cover.classList.remove('show');
+                        void cover.offsetWidth;
+                        requestAnimationFrame(function () {
+                            cover.classList.add('show');
+                        });
+                    });
+                },
+            ],
         };
 
         // Kept for easy restore of the cover passphrase form

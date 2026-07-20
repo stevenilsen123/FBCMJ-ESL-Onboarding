@@ -44,7 +44,7 @@ If you don't have a Pearson account yet, follow these steps!
 
 Here's what the form should look like when it's all filled out:
 
-![Pearson create account form](_media/images/PearsonCreateAccountForm.png)
+![Pearson create account form](../_media/images/PearsonCreateAccountForm.png)
 
 #### 5. Tap the "Create account" button, then tap "Continue" after your account is created
 
@@ -52,17 +52,17 @@ Here's what the form should look like when it's all filled out:
 
 #### 6. When asked for your phone number, enter it, then tap "Send verification code"
 
-![Pearson create account phone number](_media/images/PearsonCreateAccountPhoneNumber.png)
+![Pearson create account phone number](../_media/images/PearsonCreateAccountPhoneNumber.png)
 
 #### 7. You will get a text message with a 6-digit code
 #### 8. Enter the code into the website and tap "Verify", then "Continue"
 
-![Pearson create account phone verification](_media/images/PearsonCreateAccountPhoneVerification.png)
+![Pearson create account phone verification](../_media/images/PearsonCreateAccountPhoneVerification.png)
 
 #### 9. After your account has been created, you will arrive at the "My courses" page
 You can now close that browser tab for now
 
-![Pearson My courses empty](_media/images/PearsonMyCoursesEmpty.png)
+![Pearson My courses empty](../_media/images/PearsonMyCoursesEmpty.png)
 
 #### 10. Finally, you need to verify your email address with Pearson
 - Check your email app, you should have a new email from Pearson to "Verify your email address for your Pearson Account"

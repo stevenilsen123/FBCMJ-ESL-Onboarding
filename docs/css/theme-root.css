@@ -26,6 +26,7 @@
     --base-background-color: var(--color-fbcmj-white);
     --base-color: var(--color-fbcmj-text);
     --base-font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    --base-font-family-ar: "Noto Sans Arabic", "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     --base-font-size: 16px;
 
     --content-max-width: 65em;

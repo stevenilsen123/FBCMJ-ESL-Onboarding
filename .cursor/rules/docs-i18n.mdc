@@ -1,0 +1,19 @@
+---
+description: Translation rules for docs Spanish/Arabic locales
+globs:
+  - docs/**/*.md
+alwaysApply: false
+---
+
+# Docs i18n translation rules
+
+When editing `docs/es/**` or `docs/ar/**`:
+
+1. Treat `docs/en/` as the only source of truth. Mirror structure exactly (headings, lists, blockquotes, HTML buttons, image order).
+2. Read `docs/i18n/glossary.md` before translating. Follow locked terms and “do not translate” items.
+3. Never translate or alter: `href` targets, `:id=` values, CSS classes, image paths, `WIFI:` URIs, or Pearson URLs.
+4. Keep Pearson on-screen UI labels in English inside quotes so they match screenshots.
+5. Preserve Markdown/HTML syntax; keep custom heading IDs identical to English.
+6. Use a warm, simple ESL-friendly tone. Do not add or remove steps.
+7. For Arabic (`docs/ar/`), write natural Modern Standard Arabic suitable for learners; RTL is handled by the app chrome.
+8. After translating, verify in-page links (`#email-account`, etc.) still match English IDs.
