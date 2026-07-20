@@ -1,0 +1,9 @@
+services:
+  fbcmj-esl-onboarding:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    hostname: fbcmj-esl-onboarding
+    container_name: fbcmj-esl-onboarding
+    volumes:
+      - ..:/home/dev/workspace:cached

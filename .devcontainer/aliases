@@ -1,0 +1,31 @@
+#region Basic
+function c() {
+    echo "command: clear"
+    clear
+}
+
+function ll() {
+    echo "command: ls -ll $@"
+    ls -ll "$@"
+}
+
+function lh() {
+    echo "command: ls -lh $@"
+    ls -lh "$@"
+}
+
+function la() {
+    echo "command: ls -a $@"
+    ls -a "$@"
+}
+
+function lha() {
+    echo "command: ls -lha $@"
+    ls -lha "$@"
+}
+
+function ds() {
+    echo "command: docsify serve ."
+    docsify serve .
+}
+#endregion

@@ -1,0 +1,13 @@
+{
+  "name": "scripts",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Local tooling for FBCMJ ESL Onboarding docs",
+  "scripts": {
+    "export-pdf": "node ./export-pdf.mjs"
+  },
+  "dependencies": {
+    "puppeteer-core": "^24.43.1"
+  }
+}

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>FBCMJ ESL Onboarding Guide</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="description" content="FBCMJ ESL Onboarding Guide">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <link rel="icon" type="image/png" href="_media/images/icons/favicon.png">
+    <link rel="manifest" href="manifest.json">
+
+    <!-- Theme: Simple -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css">
+
+    <!-- Custom theme styles -->
+    <link rel="stylesheet" href="css/theme-root.css">
+    <link rel="stylesheet" href="css/theme-components.css">
+</head>
+
+<body>
+    <div id="app">Please wait...</div>
+
+    <script>
+        // Shared weak gate helpers (client-side only, not real security)
+        // GATE_ENABLED=false for now; keep helpers/handlers to restore later.
+        (function () {
+            var GATE_ENABLED = false;
+            var STORAGE_KEY = 'fbcmj_esl_unlocked';
+            var TARGET_HASH = '#/README';
+
+            function isUnlocked() {
+                try {
+                    return window.sessionStorage && window.sessionStorage.getItem(STORAGE_KEY) === '1';
+                } catch (e) {
+                    return false;
+                }
+            }
+
+            function setUnlocked() {
+                try {
+                    window.sessionStorage && window.sessionStorage.setItem(STORAGE_KEY, '1');
+                } catch (e) {
+                    // ignore
+                }
+            }
+
+            function isCoverHash(hash) {
+                if (!hash || hash === '#') {
+                    return true;
+                }
+
+                var cleaned = hash.replace(/^#/, '');
+                if (cleaned === '' || cleaned === '/' || cleaned === '/?') {
+                    return true;
+                }
+
+                var path = cleaned.split('?')[0];
+                return path === '' || path === '/';
+            }
+
+            function redirectToCoverIfLocked() {
+                if (!GATE_ENABLED) {
+                    return;
+                }
+
+                if (isUnlocked()) {
+                    return;
+                }
+
+                if (!isCoverHash(window.location.hash)) {
+                    var url = window.location.pathname + window.location.search + '#/';
+                    window.location.replace(url);
+                }
+            }
+
+            function redirectToTargetIfUnlocked() {
+                if (!isUnlocked()) {
+                    return;
+                }
+
+                if (!window.location.hash || window.location.hash === '#/' || window.location.hash === '#') {
+                    window.location.hash = TARGET_HASH;
+                }
+            }
+
+            window.FBCMJ_GATE = {
+                GATE_ENABLED: GATE_ENABLED,
+                isUnlocked: isUnlocked,
+                setUnlocked: setUnlocked,
+                redirectToCoverIfLocked: redirectToCoverIfLocked,
+                redirectToTargetIfUnlocked: redirectToTargetIfUnlocked,
+            };
+
+            // Alias kept for restore-ready cover form handler
+            window.SIMPL_GATE = window.FBCMJ_GATE;
+
+            window.addEventListener('hashchange', redirectToCoverIfLocked);
+            redirectToCoverIfLocked();
+        })();
+    </script>
+
+    <script>
+        window.$docsify = {
+            name: 'FBCMJ ESL Onboarding Guide',
+            repo: '',
+            coverpage: true,
+            onlyCover: true,
+        };
+
+        // Kept for easy restore of the cover passphrase form
+        window.handleSimplGate = function (event) {
+            event.preventDefault();
+            var form = event.target;
+            var input = form.querySelector('#release-gate-input');
+            var error = form.querySelector('#release-gate-error');
+            var PASS = 'fbcmj-esl';
+
+            if (!input) {
+                return false;
+            }
+
+            if (input.value === PASS) {
+                window.FBCMJ_GATE.setUnlocked();
+
+                if (error) {
+                    error.style.display = 'none';
+                }
+
+                window.FBCMJ_GATE.redirectToTargetIfUnlocked();
+            } else if (error) {
+                error.style.display = 'block';
+            }
+
+            return false;
+        };
+    </script>
+
+    <!-- docsify -->
+    <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script>
+
+    <!-- docsify-themeable -->
+    <script src="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/js/docsify-themeable.min.js"></script>
+</body>
+
+</html>

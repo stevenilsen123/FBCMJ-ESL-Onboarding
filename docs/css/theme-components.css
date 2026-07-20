@@ -1,0 +1,206 @@
+.sidebar,
+.sidebar-toggle {
+    display: none !important;
+}
+
+.sidebar + .content {
+    margin-left: 0 !important;
+}
+
+@media (max-width: 768px) {
+    .markdown-section {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .cover .cover-main {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+
+.markdown-section a.anchor {
+    pointer-events: none;
+    cursor: default;
+}
+
+.markdown-section a.anchor:hover {
+    text-decoration: none;
+}
+
+a.content-button {
+    display: inline-block;
+    margin: 0.5em 0 1em;
+    padding: var(--cover-button-padding);
+    border: var(--cover-button-primary-border);
+    border-radius: var(--cover-button-border-radius);
+    background-color: var(--color-fbcmj-orange);
+    color: var(--color-on-fbcmj-orange);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+a.content-button:hover {
+    background-color: var(--cover-button-primary-background--hover);
+    color: var(--color-on-fbcmj-blue);
+    text-decoration: none;
+}
+
+/* Cover ↔ guide transition (fade + slight vertical move) */
+section.cover {
+    display: flex !important;
+    position: fixed;
+    inset: 0;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(calc(var(--cover-transition-distance) * -1));
+    transition:
+        opacity var(--cover-transition-duration) var(--cover-transition-ease),
+        transform var(--cover-transition-duration) var(--cover-transition-ease),
+        visibility var(--cover-transition-duration) var(--cover-transition-ease);
+}
+
+section.cover.show {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+main {
+    opacity: 1;
+    transform: translateY(0);
+    transition:
+        opacity var(--cover-transition-duration) var(--cover-transition-ease),
+        transform var(--cover-transition-duration) var(--cover-transition-ease),
+        visibility var(--cover-transition-duration) var(--cover-transition-ease);
+    transition-delay: 0.08s;
+}
+
+main.hidden {
+    display: block !important;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(var(--cover-transition-distance));
+}
+
+body:has(section.cover.show) {
+    overflow: hidden;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    section.cover,
+    main {
+        transition: none;
+    }
+}
+
+.markdown-section h1 {
+    color: var(--color-fbcmj-blue);
+    font-size: 1.8em;
+    font-weight: 600;
+    text-align: start;
+    margin-top: 2em;
+}
+
+.h1Subtitle {
+    text-align: start;
+    color: var(--color-fbcmj-orange);
+    font-size: var(--font-size-xl);
+    font-style: italic;
+    margin-bottom: -1em;
+}
+
+.markdown-section h2 {
+    border-color: var(--color-fbcmj-orange);
+    margin-top: 1em;
+    margin-bottom: 0;
+}
+
+.markdown-section h3 {
+    color: var(--color-fbcmj-orange);
+    margin-top: 1em;
+    margin-bottom: -0.65em;
+}
+
+/* Keep heading + inline links on one line (theme uses inline-block on a[data-id]) */
+.markdown-section h3 a[data-id] {
+    display: inline;
+}
+
+.markdown-section h4 {
+    margin-top: 0.5em;
+    font-weight: 500;
+    color: var(--color-fbcmj-blue);
+}
+
+.markdown-section code {
+    font-size: 0.9em;
+}
+
+img {
+    display: block;
+    max-height: 36em;
+    width: auto;
+    margin-left: 0;
+    margin-right: auto;
+    border: 0.25em;
+    border-style: solid;
+    border-radius: 0.75em;
+}
+
+img[src*="FbcmjLogo.svg"],
+img[src*="FbcmjIcon.svg"] {
+    border: none;
+    border-radius: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Kept for easy restore of the cover passphrase form */
+.release-gate {
+    margin-top: 2rem;
+    max-width: 28rem;
+    place-self: center;
+}
+
+.release-gate label {
+    display: block;
+    margin-bottom: 0.75rem;
+}
+
+.release-gate-row {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+}
+
+.release-gate-row input[type="password"] {
+    flex: 1 1 auto;
+    padding: 0.4rem 0.75rem;
+    border-radius: var(--cover-button-border-radius);
+    border: 0.2em solid var(--color-fbcmj-grey);
+    background-color: var(--color-fbcmj-white);
+    color: var(--color-fbcmj-text);
+}
+
+.release-gate-row button {
+    padding: var(--cover-button-padding);
+    border-radius: var(--cover-button-border-radius);
+    border: var(--cover-button-primary-border);
+    background-color: var(--color-fbcmj-orange);
+    color: var(--color-on-fbcmj-orange);
+    cursor: pointer;
+}
+
+.release-gate-row button:hover {
+    background-color: var(--cover-button-primary-background--hover);
+    color: var(--color-on-fbcmj-blue);
+}
+
+.release-gate-error {
+    margin-top: 0.75rem;
+    color: var(--color-fbcmj-orange);
+}
