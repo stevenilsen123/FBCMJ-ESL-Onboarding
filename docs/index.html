@@ -119,6 +119,11 @@
                 document.documentElement.dir = dir;
             }
 
+            function hashFromUrl(url) {
+                var index = String(url || '').indexOf('#');
+                return index >= 0 ? url.slice(index) : '#/';
+            }
+
             window.FBCMJ_GATE = {
                 GATE_ENABLED: GATE_ENABLED,
                 isUnlocked: isUnlocked,
@@ -128,15 +133,30 @@
                 applyDocumentLocale: applyDocumentLocale,
                 getLocaleFromHash: getLocaleFromHash,
                 isCoverHash: isCoverHash,
+                pendingCoverEnter: false,
             };
 
             // Alias kept for restore-ready cover form handler
             window.SIMPL_GATE = window.FBCMJ_GATE;
 
-            window.addEventListener('hashchange', function () {
+            // Registered before docsify so cover→cover can reuse .cover.show transitions.
+            window.addEventListener('hashchange', function (event) {
                 redirectToCoverIfLocked();
                 applyDocumentLocale();
+
+                var fromHash = hashFromUrl(event.oldURL);
+                var toHash = window.location.hash || '#/';
+                if (!isCoverHash(fromHash) || !isCoverHash(toHash)) {
+                    return;
+                }
+
+                window.FBCMJ_GATE.pendingCoverEnter = true;
+                var cover = document.querySelector('section.cover');
+                if (cover) {
+                    cover.classList.remove('show');
+                }
             });
+
             redirectToCoverIfLocked();
             applyDocumentLocale();
         })();
@@ -152,55 +172,51 @@
             fallbackLanguages: ['en'],
             plugins: [
                 function (hook) {
-                    // Docsify keeps .cover.show when switching covers, so replay the
-                    // same show-class transition used for cover ↔ guide.
-                    var pendingCoverTransition = false;
+                    var previousHash = window.location.hash || '#/';
 
-                    function hashFromUrl(url) {
-                        var index = String(url || '').indexOf('#');
-                        return index >= 0 ? url.slice(index) : '#/';
+                    function normalizeHash(hash) {
+                        return String(hash || '#/').split('?')[0].replace(/\/$/, '') || '#';
                     }
 
-                    window.addEventListener('hashchange', function (event) {
-                        var gate = window.FBCMJ_GATE;
-                        if (!gate || !gate.isCoverHash) {
-                            return;
-                        }
-
-                        var fromHash = hashFromUrl(event.oldURL);
-                        var toHash = window.location.hash || '#/';
-                        if (!gate.isCoverHash(fromHash) || !gate.isCoverHash(toHash)) {
-                            return;
-                        }
-
-                        pendingCoverTransition = true;
-                        var cover = document.querySelector('section.cover');
-                        if (cover) {
-                            cover.classList.remove('show');
-                        }
-                    });
+                    function playCoverEnter(cover) {
+                        cover.style.transition = 'none';
+                        cover.classList.remove('show');
+                        void cover.offsetWidth;
+                        cover.style.removeProperty('transition');
+                        requestAnimationFrame(function () {
+                            cover.classList.add('show');
+                        });
+                    }
 
                     hook.doneEach(function () {
-                        if (window.FBCMJ_GATE && window.FBCMJ_GATE.applyDocumentLocale) {
-                            window.FBCMJ_GATE.applyDocumentLocale();
+                        var gate = window.FBCMJ_GATE;
+                        if (gate && gate.applyDocumentLocale) {
+                            gate.applyDocumentLocale();
                         }
 
-                        if (!pendingCoverTransition) {
+                        var currentHash = window.location.hash || '#/';
+                        var shouldAnimate = gate && (
+                            gate.pendingCoverEnter ||
+                            (
+                                gate.isCoverHash(previousHash) &&
+                                gate.isCoverHash(currentHash) &&
+                                normalizeHash(previousHash) !== normalizeHash(currentHash)
+                            )
+                        );
+
+                        previousHash = currentHash;
+
+                        if (!shouldAnimate) {
                             return;
                         }
 
-                        pendingCoverTransition = false;
+                        gate.pendingCoverEnter = false;
                         var cover = document.querySelector('section.cover');
                         if (!cover) {
                             return;
                         }
 
-                        // Docsify re-adds .show while rendering; replay the CSS transition.
-                        cover.classList.remove('show');
-                        void cover.offsetWidth;
-                        requestAnimationFrame(function () {
-                            cover.classList.add('show');
-                        });
+                        playCoverEnter(cover);
                     });
                 },
             ],
