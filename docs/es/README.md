@@ -12,9 +12,66 @@
 
 Si todavía no tienen una dirección de correo electrónico, ¡no se preocupen! Les guiaremos para crear una cuenta nueva de Gmail.
 
-#### 1. TODO
-#### 2. TODO
-#### 3. TODO
+#### 1. Antes de tocar el botón del siguiente paso, tengan lista esta información:
+- Su nombre
+- Su apellido
+- Su fecha de nacimiento
+- Su género
+- Un nombre de su elección para su nueva dirección de correo (como `johndoe1776@gmail.com`)
+- Su número de teléfono (vincularlo ayuda a mantener la cuenta segura)
+- Una contraseña, que debe incluir:
+  - 8 caracteres o más
+  - Al menos un carácter especial / símbolo
+  - Al menos 1 letra mayúscula
+  - Al menos 1 letra minúscula
+  - Que no contenga el nombre de su correo (como `johndoe` si su dirección es `johndoe1776@gmail.com`)
+
+Cuando Google pregunte para qué es la cuenta, elijan **"For my personal use"**.
+
+#### 2. Cuando tengan toda la información lista, toquen el botón de abajo.
+
+> Al tocar el botón se abrirá una **pestaña nueva** en el navegador para que puedan **volver a esta guía**. Si no saben cómo cambiar de pestaña en el navegador, ¡pidan ayuda!
+
+[Crear una cuenta nueva de Gmail](https://accounts.google.com/signup ":class=content-button")
+
+#### 4. Escriban su nombre y su apellido, luego toquen **"Next"**
+
+![Gmail create account name](../_media/images/GmailCreateAccountName.png)
+
+#### 5. Escriban su fecha de nacimiento y el género, luego toquen **"Next"**
+
+![Gmail create account birthday](../_media/images/GmailCreateAccountBirthday.png)
+
+#### 6. Escriban el nombre que desean para su dirección de correo
+No necesitan escribir la parte `@gmail.com`, solo la primera parte como `johndoe1776`
+
+![Gmail create account choose email](../_media/images/GmailCreateAccountChooseEmail.png)
+
+> Si la dirección de correo que eligieron ya está en uso, prueben agregar al final algunos números que puedan recordar. ¡Pero **no incluyan nada secreto**, esta información es **pública**!
+
+![Gmail create account choose email](../_media/images/GmailCreateAccountChooseEmailTaken.png)
+
+#### 7. Escriban la contraseña que desean
+Escriban la contraseña que quieren, luego otra vez en el siguiente campo, y toquen **"Next"**
+
+![Gmail create account password](../_media/images/GmailCreateAccountPassword.png)
+
+#### 8. Google puede preguntar por su número de teléfono
+**No** salten este paso — vincular el número de teléfono ayuda a mantener la cuenta segura.
+- **En Android:** Google a menudo ya conoce este número. Toquen **"Yes, I'm in"** para confirmarlo.
+- **En iPhone:** Escriban su número de teléfono, luego toquen **"Next"**
+
+#### 9. Si Google les envió un mensaje de texto con un código
+- **En Android:** El código puede llenarse solo. Si no, escríbanlo y luego toquen **"Next"**
+- **En iPhone:** En iPhones más nuevos, el código suele aparecer arriba del teclado — tóquenlo para llenarlo. Si no lo ven, abran Mensajes, escriban el código y luego toquen **"Next"**
+
+#### 10. Si Google pide un correo de recuperación, toquen **"Skip"**
+#### 11. Si Google muestra la información de la cuenta para revisarla, comprueben que el nombre y el correo se vean correctos, luego toquen **"Next"**
+#### 12. Lean la Privacy and Terms de Google, luego toquen **"I agree"**
+#### 13. ¡Su cuenta de Gmail ya está lista!
+Por ahora pueden cerrar esa pestaña del navegador y volver a esta guía para el [Paso 3](#pearson-account)
+
+> Anoten su nueva dirección de Gmail si todavía no lo han hecho. La necesitarán para Pearson.
 
 ## 3. Creen su cuenta de Pearson :id=pearson-account
 ### ¿Ya tienen una cuenta de Pearson? Salten al&nbsp;[Paso 4](#4-register-your-books)
@@ -23,7 +80,7 @@ Si todavía no tienen una cuenta de Pearson, ¡sigan estos pasos!
 #### 1. Antes de tocar el botón del siguiente paso, tengan lista esta información:
 - Su nombre
 - Su apellido
-- Su cuenta personal de correo electrónico a la que puedan entrar desde este teléfono. (vuelvan al [Paso 2](#email-account) si todavía no tienen una cuenta de correo)
+- Su cuenta personal de correo electrónico a la que puedan entrar. (vuelvan al [Paso 2](#email-account) si todavía no tienen una cuenta de correo)
 - Un nombre de usuario (pueden usar su dirección de correo para esto)
 - Una contraseña, que debe incluir:
   - 8 caracteres o más
