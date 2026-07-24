@@ -30,7 +30,8 @@
     --base-font-size: 16px;
 
     --content-max-width: 65em;
-    --sidebar-width: 0;
+    --sidebar-width: 17rem;
+    --sidebar-background: var(--color-fbcmj-white);
 
     /* Horizontal Rule */
     --hr-border: 1px solid var(--color-fbcmj-grey);

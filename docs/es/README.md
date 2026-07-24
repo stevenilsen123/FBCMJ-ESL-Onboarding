@@ -74,7 +74,7 @@ Ahora pueden cerrar esa pestaña del navegador y volver a esta guía para el [Pa
 > Anoten su nueva dirección de Gmail si todavía no lo han hecho. La necesitarán para Pearson.
 
 ## 3. Creen su cuenta de Pearson :id=pearson-account
-### ¿Ya tienen una cuenta de Pearson? Salten al&nbsp;[Paso 4](#register-books)
+### ¿Ya tienen una cuenta de Pearson? Salten al&nbsp;[Paso 4](#reader-plus)
 Si todavía no tienen una cuenta de Pearson, ¡sigan estos pasos!
 
 #### 1. Antes de tocar el botón del siguiente paso, tengan lista esta información:
@@ -87,7 +87,7 @@ Si todavía no tienen una cuenta de Pearson, ¡sigan estos pasos!
   - Sin caracteres especiales excepto `-`, `.`, `@` o `_`
   - Al menos 1 letra mayúscula
   - Al menos 1 letra minúscula
-- Cuando les pidan el **Country**, elijan `United States`
+- Cuando les pidan el **Country**, elijan `United States` (este es su país de residencia, donde viven ahora)
 - Cuando les pidan el **Role**, elijan `Student`
 
 #### 2. Cuando tengan toda la información lista, toquen el botón de abajo.
@@ -117,7 +117,7 @@ Así debe verse el formulario cuando esté completo:
 ![Pearson create account phone verification](../_media/images/PearsonCreateAccountPhoneVerification.png)
 
 #### 9. Después de crear la cuenta, llegarán a la página **"My courses"**
-Por ahora pueden cerrar esa pestaña del navegador
+Ahora pueden cerrar esa pestaña del navegador y volver a esta guía para el [Paso 4](#reader-plus)
 
 ![Pearson My courses empty](../_media/images/PearsonMyCoursesEmpty.png)
 
@@ -126,20 +126,25 @@ Por ahora pueden cerrar esa pestaña del navegador
 - Toquen el botón **"Verify"** en el correo
 - Eso debería llevarlos de nuevo a la página **"My courses"**
 
-## 4. Registren sus libros :id=register-books
-#### 1. Consigan sus códigos de acceso de estudiante
-Cada uno de sus libros tiene un código de acceso de estudiante **separado** e individual.
+## 4. Obtengan acceso a su ebook Reader+ :id=reader-plus
+### ¿Ya tienen su ebook Reader+ listo? Salten al&nbsp;[Paso 5](#pearson-app)
+Si todavía no tienen acceso a su ebook Reader+, ¡sigan estos pasos!
+
+#### 1. Consigan el código de acceso de su **Student book**
+Su **Student book** tiene un código de acceso de estudiante para el ebook Reader+.
+
+> **Importante:** Usen el código de su **Student book** aquí. **No** usen el código de su **Workbook** en este paso. El código del Workbook es solo para la aplicación Pearson Practice English en el [Paso 5](#pearson-app).
 
 > **¡Cuidado!** Algunas monedas pueden dañar el código al raspar el área plateada. Se recomienda usar una **tarjeta de crédito** (o una tarjeta similar) para raspar el código.
 
-- En cada libro, busquen en la parte de atrás de la portada el **área plateada para raspar**
+- En su **Student book**, busquen en la parte de atrás de la portada el **área plateada para raspar**
 - Raspen el área con una **tarjeta de crédito** (o una tarjeta similar)
 
-#### 2. Antes de tocar el botón del siguiente paso, necesitarán:
+#### 2. Antes de tocar el botón del siguiente paso, tengan lista esta información:
 - Su **nombre de usuario** y **contraseña** de Pearson del [Paso 3](#pearson-account)
-- Sus **códigos de acceso de estudiante** de cada uno de sus libros
+- El código de acceso de su **Student book**
 
-#### 3. Cuando tengan el código de acceso listo, toquen el botón de abajo.
+#### 3. Cuando tengan listo el código de acceso del Student book, toquen el botón de abajo.
 
 > Al tocar el botón se abrirá una **pestaña nueva** en el navegador para que puedan **volver a esta guía**. Si no saben cómo cambiar de pestaña en el navegador, ¡pidan ayuda!
 
@@ -151,7 +156,7 @@ Cada uno de sus libros tiene un código de acceso de estudiante **separado** e i
 
 ![Pearson add new product](../_media/images/PearsonAddNewProduct.png)
 
-#### 7. Escriban su código **exactamente como está escrito** (incluyendo los `-`) en el campo, luego toquen **"Add product"**
+#### 7. Escriban el código de su **Student book** **exactamente como está escrito** (incluyendo los `-`) en el campo, luego toquen **"Add product"**
 
 ![Pearson enter access code](../_media/images/PearsonEnterAccessCode.png)
 
@@ -163,36 +168,49 @@ Cada uno de sus libros tiene un código de acceso de estudiante **separado** e i
 
 ![Back to dashboard](../_media/images/PearsonBackToDashboard.png)
 
-#### 10. Cuando se agregue el libro, toquen **"Go to Products"** (o **"Back to Dashboard"**)
-
-#### 11. Si tienen más libros para registrar, vuelvan a [Add product](#add-product-button) y repitan el proceso con sus otros libros
-
-#### 12. Ahora deben ver su libro o libros en el Dashboard
+#### 10. ¡Su ebook Reader+ ya está listo!
+Ahora pueden cerrar esa pestaña del navegador y volver a esta guía para el [Paso 5](#pearson-app)
 
 ![Pearson dashboard with product](../_media/images/PearsonDashboardWithProduct.png)
 
 ## 5. Consigan la aplicación Pearson Practice English :id=pearson-app
 
-#### 1. Toquen el botón de Play Store para Android, o el botón de App Store para iPhone
+#### 1. Consigan el código de acceso de su **Workbook**
+Su **Workbook** tiene un código de acceso de estudiante para las actividades de práctica en la aplicación Pearson Practice English.
+
+> **Importante:** Usen el código de su **Workbook** aquí. **No** usen el código de su **Student book** en este paso. El código del Student book es solo para el ebook Reader+ en el [Paso 4](#reader-plus).
+
+> **¡Cuidado!** Algunas monedas pueden dañar el código al raspar el área plateada. Se recomienda usar una **tarjeta de crédito** (o una tarjeta similar) para raspar el código.
+
+- En su **Workbook**, busquen en la parte de atrás de la portada el **área plateada para raspar**
+- Raspen el área con una **tarjeta de crédito** (o una tarjeta similar)
+
+#### 2. Toquen el botón de Play Store para Android, o el botón de App Store para iPhone
+
+> Al tocar el botón se abrirá otra aplicación en su teléfono. Vuelvan a la aplicación del navegador para regresar a esta guía. Si no saben cómo cambiar de aplicación en el teléfono, ¡pidan ayuda!
 
 [![Get it on Google Play](../_media/images/GetItOnGooglePlay.png)](https://play.google.com/store/apps/details?id=com.pearson.ppe)
 
 [![Download on the App Store](../_media/images/DownloadOnTheAppStore.png)](https://apps.apple.com/us/app/pearson-practice-english/id1402874725)
 
-#### 2. Toquen **"Install"** (Android) o **"Get"** (iPhone), luego esperen hasta que la aplicación termine de instalarse
-#### 3. Toquen **"Open"** (o toquen el ícono de la aplicación Pearson Practice English)
-#### 4. Toquen **"My Profile"** en la parte de abajo de la pantalla
-#### 5. Toquen **"LET’S GO!"**
+#### 3. En la aplicación de la tienda
+- Toquen **"Install"** (Android) o **"Get"** (iPhone), luego esperen hasta que la aplicación termine de instalarse
+- Toquen **"Open"** (o toquen el ícono de Pearson Practice English en la lista de aplicaciones del teléfono)
 
-![Pearson Practice English My Profile](../_media/images/PearsonAppMyProfile.png)
-
-#### 6. Inicien sesión con su nombre de usuario y contraseña de Pearson del Paso 3, luego toquen **"Continue"**
+#### 4. En la aplicación Pearson Practice English
+- Toquen **"My Profile"** en la parte de abajo de la pantalla
+- Toquen **"LET’S GO!"** debajo de sign in
+- Inicien sesión con su nombre de usuario y contraseña de Pearson del Paso 3, luego toquen **"Continue"**
 
 > Usen la cuenta que ya crearon en el [Paso 3](#pearson-account). **No** toquen **"Create an account"**.
 
-![Pearson Practice English sign in](../_media/images/PearsonAppSignIn.png)
+#### 5. Después de iniciar sesión, verán Terms of use y Privacy policy
+- Cuando les pidan el país, seleccionen **"United States"** (este es su país de residencia, donde viven ahora)
+- Revisen los términos, luego toquen **"Agree"**
 
-#### 7. ¡Ya iniciaron sesión!
-Pueden volver a esta guía en cualquier momento si necesitan ayuda.
-
-![Pearson Practice English signed in](../_media/images/PearsonAppSignedIn.png)
+#### 6. Desbloqueen sus actividades de práctica
+- Toquen **"Unlock"** para desbloquear las actividades de práctica
+- Escriban el código de su **Workbook** **exactamente como está escrito** (incluyendo los `-`), luego toquen **"Check code"**
+- Después de ingresar el código correctamente, toquen **"Products"** en la parte de abajo de la pantalla
+- Deslicen entre los productos hasta encontrar el nombre de su libro, como **"Future second edition"**, luego toquen la tarjeta
+- Toquen su nivel, ¡y allí pueden acceder a todo su contenido!

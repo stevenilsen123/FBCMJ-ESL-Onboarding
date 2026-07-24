@@ -1,0 +1,6 @@
+- [تغيير اللغة](/)
+- [1. شبكة Wi‑Fi](/ar/README#church-wifi)
+- [2. حساب البريد](/ar/README#email-account)
+- [3. حساب Pearson](/ar/README#pearson-account)
+- [4. كتاب Reader+](/ar/README#reader-plus)
+- [5. تطبيق Practice English](/ar/README#pearson-app)

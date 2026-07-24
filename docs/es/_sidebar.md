@@ -1,0 +1,6 @@
+- [Cambiar idioma](/)
+- [1. Wi‑Fi de la iglesia](/es/README#church-wifi)
+- [2. Cuenta de correo](/es/README#email-account)
+- [3. Cuenta de Pearson](/es/README#pearson-account)
+- [4. Ebook Reader+](/es/README#reader-plus)
+- [5. App Practice English](/es/README#pearson-app)

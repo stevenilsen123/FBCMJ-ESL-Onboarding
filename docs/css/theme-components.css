@@ -1,21 +1,125 @@
-.sidebar,
-.sidebar-toggle {
-    display: none !important;
-}
-
-.sidebar + .content {
-    margin-left: 0 !important;
-}
-
 @media (max-width: 768px) {
     .markdown-section {
+        padding-top: 3.5rem;
         padding-left: 1rem;
         padding-right: 1rem;
+    }
+
+    .markdown-section h1 {
+        margin-top: 0.5em;
+    }
+
+    /* Leave room for the sticky menu when jumping to a heading */
+    .markdown-section h1,
+    .markdown-section h2,
+    .markdown-section h3,
+    .markdown-section h4,
+    .markdown-section [id] {
+        scroll-margin-top: 3.5rem;
     }
 
     .cover .cover-main {
         padding-left: 1rem;
         padding-right: 1rem;
+    }
+
+    /* Keep hamburger pinned while reading (sidebar closed = not .close on mobile) */
+    body:not(.close) .sidebar-toggle {
+        position: fixed !important;
+        top: 0;
+        bottom: auto;
+        left: 0;
+        height: auto;
+        width: auto;
+        max-width: none;
+        transform: none !important;
+        z-index: 30;
+    }
+
+    body:not(.close) .sidebar-toggle .sidebar-toggle-button {
+        position: relative;
+        top: 0.65rem;
+        left: 0.65rem;
+        background-color: var(--color-fbcmj-white);
+        border: 1px solid var(--color-fbcmj-grey);
+        border-radius: var(--border-radius-s, 0.35rem);
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+    }
+
+    html[dir="rtl"] body:not(.close) .sidebar-toggle {
+        left: auto;
+        right: 0;
+    }
+
+    html[dir="rtl"] body:not(.close) .sidebar-toggle .sidebar-toggle-button {
+        left: auto;
+        right: 0.65rem;
+    }
+}
+
+/* Desktop: keep sidebar/toggle fixed even before docsify adds body.sticky */
+@media (min-width: 48em) {
+    body:not(:has(section.cover.show)) .sidebar,
+    body:not(:has(section.cover.show)) .sidebar-toggle {
+        position: fixed !important;
+    }
+}
+
+/* Keep sidebar/toggle off while a cover is showing */
+body:has(section.cover.show) .sidebar,
+body:has(section.cover.show) .sidebar-toggle {
+    visibility: hidden;
+    pointer-events: none;
+}
+
+/* Arabic (RTL): mirror the drawer so it rests off-canvas on the right and
+   slides in leftward, matching RTL convention. */
+html[dir="rtl"] .sidebar {
+    right: auto;
+    left: 100%;
+}
+
+html[dir="rtl"] .sidebar-toggle {
+    left: auto;
+    right: 0;
+}
+
+@media (max-width: 47.99em) {
+    html[dir="rtl"] body.close .sidebar,
+    html[dir="rtl"] body.close .sidebar-toggle,
+    html[dir="rtl"] body.close .sidebar + .content {
+        transform: translateX(calc(var(--sidebar-width) * -1));
+    }
+
+    html[dir="rtl"] body.close .sidebar-toggle .sidebar-toggle-button {
+        left: auto;
+        right: var(--sidebar-toggle-offset-left, 1rem);
+    }
+}
+
+@media (min-width: 48em) {
+    html[dir="rtl"] .sidebar,
+    html[dir="rtl"] .sidebar-toggle {
+        transform: translateX(calc(var(--sidebar-width) * -1));
+    }
+
+    html[dir="rtl"] .sidebar + .content {
+        margin-left: 0;
+        margin-right: var(--sidebar-width);
+    }
+
+    html[dir="rtl"] .sidebar-toggle .sidebar-toggle-button {
+        left: auto;
+        right: var(--sidebar-toggle-offset-left, 1rem);
+    }
+
+    html[dir="rtl"] body.close .sidebar,
+    html[dir="rtl"] body.close .sidebar-toggle {
+        transform: translateX(0);
+    }
+
+    html[dir="rtl"] body.close .sidebar + .content {
+        margin-right: 0;
     }
 }
 
@@ -130,9 +234,11 @@ section.cover.show {
     transform: translateY(0);
 }
 
+/* Do not leave a transform on resting main — it breaks position:fixed
+   for .sidebar-toggle (which lives inside main). */
 main {
     opacity: 1;
-    transform: translateY(0);
+    transform: none;
     transition:
         opacity var(--cover-transition-duration) var(--cover-transition-ease),
         transform var(--cover-transition-duration) var(--cover-transition-ease),
