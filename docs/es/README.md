@@ -34,15 +34,15 @@ Cuando Google pregunte para qué es la cuenta, elijan **"For my personal use"**.
 
 [Crear una cuenta nueva de Gmail](https://accounts.google.com/signup ":class=content-button")
 
-#### 4. Escriban su nombre y su apellido, luego toquen **"Next"**
+#### 3. Escriban su nombre y su apellido, luego toquen **"Next"**
 
 ![Gmail create account name](../_media/images/GmailCreateAccountName.png)
 
-#### 5. Escriban su fecha de nacimiento y el género, luego toquen **"Next"**
+#### 4. Escriban su fecha de nacimiento y el género, luego toquen **"Next"**
 
 ![Gmail create account birthday](../_media/images/GmailCreateAccountBirthday.png)
 
-#### 6. Escriban el nombre que desean para su dirección de correo
+#### 5. Escriban el nombre que desean para su dirección de correo
 No necesitan escribir la parte `@gmail.com`, solo la primera parte como `johndoe1776`
 
 ![Gmail create account choose email](../_media/images/GmailCreateAccountChooseEmail.png)
@@ -51,30 +51,30 @@ No necesitan escribir la parte `@gmail.com`, solo la primera parte como `johndoe
 
 ![Gmail create account choose email](../_media/images/GmailCreateAccountChooseEmailTaken.png)
 
-#### 7. Escriban la contraseña que desean
+#### 6. Escriban la contraseña que desean
 Escriban la contraseña que quieren, luego otra vez en el siguiente campo, y toquen **"Next"**
 
 ![Gmail create account password](../_media/images/GmailCreateAccountPassword.png)
 
-#### 8. Google puede preguntar por su número de teléfono
+#### 7. Google puede preguntar por su número de teléfono
 **No** salten este paso — vincular el número de teléfono ayuda a mantener la cuenta segura.
 - **En Android:** Google a menudo ya conoce este número. Toquen **"Yes, I'm in"** para confirmarlo.
 - **En iPhone:** Escriban su número de teléfono, luego toquen **"Next"**
 
-#### 9. Si Google les envió un mensaje de texto con un código
+#### 8. Si Google les envió un mensaje de texto con un código
 - **En Android:** El código puede llenarse solo. Si no, escríbanlo y luego toquen **"Next"**
 - **En iPhone:** En iPhones más nuevos, el código suele aparecer arriba del teclado — tóquenlo para llenarlo. Si no lo ven, abran Mensajes, escriban el código y luego toquen **"Next"**
 
-#### 10. Si Google pide un correo de recuperación, toquen **"Skip"**
-#### 11. Si Google muestra la información de la cuenta para revisarla, comprueben que el nombre y el correo se vean correctos, luego toquen **"Next"**
-#### 12. Lean la Privacy and Terms de Google, luego toquen **"I agree"**
-#### 13. ¡Su cuenta de Gmail ya está lista!
-Por ahora pueden cerrar esa pestaña del navegador y volver a esta guía para el [Paso 3](#pearson-account)
+#### 9. Si Google pide un correo de recuperación, toquen **"Skip"**
+#### 10. Si Google muestra la información de la cuenta para revisarla, comprueben que el nombre y el correo se vean correctos, luego toquen **"Next"**
+#### 11. Lean la Privacy and Terms de Google, luego toquen **"I agree"**
+#### 12. ¡Su cuenta de Gmail ya está lista!
+Ahora pueden cerrar esa pestaña del navegador y volver a esta guía para el [Paso 3](#pearson-account)
 
 > Anoten su nueva dirección de Gmail si todavía no lo han hecho. La necesitarán para Pearson.
 
 ## 3. Creen su cuenta de Pearson :id=pearson-account
-### ¿Ya tienen una cuenta de Pearson? Salten al&nbsp;[Paso 4](#4-register-your-books)
+### ¿Ya tienen una cuenta de Pearson? Salten al&nbsp;[Paso 4](#register-books)
 Si todavía no tienen una cuenta de Pearson, ¡sigan estos pasos!
 
 #### 1. Antes de tocar el botón del siguiente paso, tengan lista esta información:
@@ -126,8 +126,73 @@ Por ahora pueden cerrar esa pestaña del navegador
 - Toquen el botón **"Verify"** en el correo
 - Eso debería llevarlos de nuevo a la página **"My courses"**
 
-## 4. Registren sus libros
-TODO
+## 4. Registren sus libros :id=register-books
+#### 1. Consigan sus códigos de acceso de estudiante
+Cada uno de sus libros tiene un código de acceso de estudiante **separado** e individual.
 
-## 5. Consigan la aplicación
-TODO
+> **¡Cuidado!** Algunas monedas pueden dañar el código al raspar el área plateada. Se recomienda usar una **tarjeta de crédito** (o una tarjeta similar) para raspar el código.
+
+- En cada libro, busquen en la parte de atrás de la portada el **área plateada para raspar**
+- Raspen el área con una **tarjeta de crédito** (o una tarjeta similar)
+
+#### 2. Antes de tocar el botón del siguiente paso, necesitarán:
+- Su **nombre de usuario** y **contraseña** de Pearson del [Paso 3](#pearson-account)
+- Sus **códigos de acceso de estudiante** de cada uno de sus libros
+
+#### 3. Cuando tengan el código de acceso listo, toquen el botón de abajo.
+
+> Al tocar el botón se abrirá una **pestaña nueva** en el navegador para que puedan **volver a esta guía**. Si no saben cómo cambiar de pestaña en el navegador, ¡pidan ayuda!
+
+[Abrir el Portal de inglés de Pearson](https://english-dashboard.pearson.com/ ":class=content-button")
+
+#### 4. Inicien sesión con su nombre de usuario y contraseña de Pearson del Paso 3
+#### 5. Si les aparece **"Legal Policies"**, revisen **"Terms of use"** y **"Privacy notice"**, luego toquen **"Continue"**
+#### 6. En su Dashboard, toquen **"Add product"** :id=add-product-button
+
+![Pearson add new product](../_media/images/PearsonAddNewProduct.png)
+
+#### 7. Escriban su código **exactamente como está escrito** (incluyendo los `-`) en el campo, luego toquen **"Add product"**
+
+![Pearson enter access code](../_media/images/PearsonEnterAccessCode.png)
+
+#### 8. Si les piden hacer un recorrido del sitio, solo toquen el botón X
+
+![Close tour](../_media/images/PearsonCloseTour.png)
+
+#### 9. Cuando vean el cohete, toquen **"Back to Dashboard"**
+
+![Back to dashboard](../_media/images/PearsonBackToDashboard.png)
+
+#### 10. Cuando se agregue el libro, toquen **"Go to Products"** (o **"Back to Dashboard"**)
+
+#### 11. Si tienen más libros para registrar, vuelvan a [Add product](#add-product-button) y repitan el proceso con sus otros libros
+
+#### 12. Ahora deben ver su libro o libros en el Dashboard
+
+![Pearson dashboard with product](../_media/images/PearsonDashboardWithProduct.png)
+
+## 5. Consigan la aplicación Pearson Practice English :id=pearson-app
+
+#### 1. Toquen el botón de Play Store para Android, o el botón de App Store para iPhone
+
+[![Get it on Google Play](../_media/images/GetItOnGooglePlay.png)](https://play.google.com/store/apps/details?id=com.pearson.ppe)
+
+[![Download on the App Store](../_media/images/DownloadOnTheAppStore.png)](https://apps.apple.com/us/app/pearson-practice-english/id1402874725)
+
+#### 2. Toquen **"Install"** (Android) o **"Get"** (iPhone), luego esperen hasta que la aplicación termine de instalarse
+#### 3. Toquen **"Open"** (o toquen el ícono de la aplicación Pearson Practice English)
+#### 4. Toquen **"My Profile"** en la parte de abajo de la pantalla
+#### 5. Toquen **"LET’S GO!"**
+
+![Pearson Practice English My Profile](../_media/images/PearsonAppMyProfile.png)
+
+#### 6. Inicien sesión con su nombre de usuario y contraseña de Pearson del Paso 3, luego toquen **"Continue"**
+
+> Usen la cuenta que ya crearon en el [Paso 3](#pearson-account). **No** toquen **"Create an account"**.
+
+![Pearson Practice English sign in](../_media/images/PearsonAppSignIn.png)
+
+#### 7. ¡Ya iniciaron sesión!
+Pueden volver a esta guía en cualquier momento si necesitan ayuda.
+
+![Pearson Practice English signed in](../_media/images/PearsonAppSignedIn.png)

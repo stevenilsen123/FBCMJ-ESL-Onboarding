@@ -34,15 +34,15 @@ When Google asks what the account is for, you will choose **"For my personal use
 
 [Create a new Gmail account](https://accounts.google.com/signup ":class=content-button")
 
-#### 4. Enter your first name and last name, then tap "Next"
+#### 3. Enter your first name and last name, then tap "Next"
 
 ![Gmail create account name](../_media/images/GmailCreateAccountName.png)
 
-#### 5. Enter your birthday and gender, then tap "Next"
+#### 4. Enter your birthday and gender, then tap "Next"
 
 ![Gmail create account birthday](../_media/images/GmailCreateAccountBirthday.png)
 
-#### 6. Enter your desired email address name
+#### 5. Enter your desired email address name
 You don't need to type in the `@gmail.com` part, just the first part like `johndoe1776`
 
 ![Gmail create account choose email](../_media/images/GmailCreateAccountChooseEmail.png)
@@ -51,30 +51,30 @@ You don't need to type in the `@gmail.com` part, just the first part like `johnd
 
 ![Gmail create account choose email](../_media/images/GmailCreateAccountChooseEmailTaken.png)
 
-#### 7. Enter your desired password
+#### 6. Enter your desired password
 Type the password you want, then again in the next field, then tap "Next"
 
 ![Gmail create account password](../_media/images/GmailCreateAccountPassword.png)
 
-#### 8. Google may ask about your phone number
+#### 7. Google may ask about your phone number
 Do **not** skip this step — linking your phone number helps keep your account safe.
 - **On Android:** Google often already knows this number. Tap **"Yes, I'm in"** to confirm it.
 - **On iPhone:** Type your phone number, then tap **"Next"**
 
-#### 9. If Google sent you a text with a code
+#### 8. If Google sent you a text with a code
 - **On Android:** The code may fill in by itself. If it does not, type the code, then tap **"Next"**
 - **On iPhone:** On newer iPhones, the code often appears above the keyboard — tap it to fill it in. If you do not see it, open Messages, then type the code, then tap **"Next"**
 
-#### 10. If Google asks for a recovery email, tap "Skip"
-#### 11. If Google shows your account info to review, check that your name and email look correct, then tap "Next"
-#### 12. Read Google's Privacy and Terms, then tap "I agree"
-#### 13. Your Gmail account is ready!
+#### 9. If Google asks for a recovery email, tap "Skip"
+#### 10. If Google shows your account info to review, check that your name and email look correct, then tap "Next"
+#### 11. Read Google's Privacy and Terms, then tap "I agree"
+#### 12. Your Gmail account is ready!
 You can now close that browser tab and come back to this guide for [Step 3](#pearson-account)
 
 > Write down your new Gmail address if you have not already. You will need it for Pearson.
 
 ## 3. Create your Pearson account :id=pearson-account
-### Already have a Pearson account set up? Skip ahead to&nbsp;[Step 4](#4-register-your-books)
+### Already have a Pearson account set up? Skip ahead to&nbsp;[Step 4](#register-books)
 If you don't have a Pearson account yet, follow these steps!
 
 #### 1. Before tapping the button in the next step, you'll need to have the following information ready to go:
@@ -126,8 +126,71 @@ You can now close that browser tab for now
 - Tap the "Verify" button in the email
 - That should take you back to the "My courses" page
 
-## 4. Register your books
-TODO
+## 4. Register your books :id=register-books
+#### 1. Get your student access codes
+Each of your books has a **separate**, individual student access code.
 
-## 5. Get the app
-TODO
+> **Watch out!** Certain coins can damage your code when you scratch-off the silver area. It is recommended to use a **credit card** (or similar card) to scratch off your code.
+
+- On each of your books, look on the back of the cover page for the **silver scratch-off area**
+- Scratch off the area with a **credit card** (or similar card)
+
+#### 2. Before tapping the button in the next step, you'll need:
+- Your Pearson **username** and **password** from [Step 3](#pearson-account)
+- Your **student access codes** from each of your books
+
+#### 3. When you have your access code ready, tap the button below.
+
+> Tapping the button will open a **new tab** in your browser so you can **switch back to this guide**. If you don't know how to switch back and forth between tabs in your browser, just ask for help!
+
+[Open Pearson English Portal](https://english-dashboard.pearson.com/ ":class=content-button")
+
+#### 4. Sign in with your Pearson username and password from Step 3
+#### 5. If you are prompted for "Legal Policies", review the "Terms of use" and "Privacy notice", then tap "Continue"
+#### 6. On your Dashboard, tap "Add product" :id=add-product-button
+
+![Pearson add new product](../_media/images/PearsonAddNewProduct.png)
+
+#### 7. Type your code **exactly as written** (including `-`s) in the field, then tap "Add product"
+
+![Pearson enter access code](../_media/images/PearsonEnterAccessCode.png)
+
+#### 8. If you are prompted to take a tour of the site, just tap the X button
+
+![Close tour](../_media/images/PearsonCloseTour.png)
+
+#### 9. When you see the rocket ship, tap "Back to Dashboard"
+
+![Back to dashboard](../_media/images/PearsonBackToDashboard.png)
+
+#### 10. If you have more books to register, go back to [Add product](#add-product-button) and repeat the process for your other books
+
+#### 11. You should now see your book(s) on your Dashboard
+
+![Pearson dashboard with product](../_media/images/PearsonDashboardWithProduct.png)
+
+## 5. Get the Pearson Practice English app :id=pearson-app
+
+#### 1. Tap the Play store button for Android, or the App Store button for iPhone
+
+[![Get it on Google Play](../_media/images/GetItOnGooglePlay.png)](https://play.google.com/store/apps/details?id=com.pearson.ppe)
+
+[![Download on the App Store](../_media/images/DownloadOnTheAppStore.png)](https://apps.apple.com/us/app/pearson-practice-english/id1402874725)
+
+#### 2. Tap "Install" (Android) or "Get" (iPhone), then wait until the app finishes installing
+#### 3. Tap "Open" (or tap the Pearson Practice English app icon)
+#### 4. Tap "My Profile" at the bottom of the screen
+#### 5. Tap "LET’S GO!"
+
+![Pearson Practice English My Profile](../_media/images/PearsonAppMyProfile.png)
+
+#### 6. Sign in with your Pearson username and password from Step 3, then tap "Continue"
+
+> Use the account you already created in [Step 3](#pearson-account). Do **not** tap "Create an account".
+
+![Pearson Practice English sign in](../_media/images/PearsonAppSignIn.png)
+
+#### 7. You are signed in!
+You can come back to this guide any time if you need help.
+
+![Pearson Practice English signed in](../_media/images/PearsonAppSignedIn.png)

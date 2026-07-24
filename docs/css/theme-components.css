@@ -91,7 +91,7 @@ html[dir="rtl"] .markdown-section {
     text-align: start;
 }
 
-html[dir="rtl"] img:not([src*="FbcmjLogo.svg"]):not([src*="FbcmjIcon.svg"]) {
+html[dir="rtl"] img:not([src*="FbcmjLogo.svg"]):not([src*="FbcmjIcon.svg"]):not([src*="GetItOnGooglePlay.png"]):not([src*="DownloadOnTheAppStore.png"]) {
     margin-inline-start: 0;
     margin-inline-end: auto;
 }
@@ -214,10 +214,21 @@ img {
 }
 
 img[src*="FbcmjLogo.svg"],
-img[src*="FbcmjIcon.svg"] {
+img[src*="FbcmjIcon.svg"],
+img[src*="GetItOnGooglePlay.png"],
+img[src*="DownloadOnTheAppStore.png"] {
     border: none;
     border-radius: 0;
     margin-inline: auto;
+}
+
+img[src*="GetItOnGooglePlay.png"],
+img[src*="DownloadOnTheAppStore.png"] {
+    display: inline-block;
+    max-height: 3.5rem;
+    width: auto;
+    margin: 0.5em 0.75em 0.5em 0;
+    vertical-align: middle;
 }
 
 /* Kept for easy restore of the cover passphrase form */
